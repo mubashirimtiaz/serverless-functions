@@ -3,6 +3,7 @@ const result = document.querySelector(".result");
 const getItems = async () => {
   try {
     const { data } = await axios.get("/api/2-basic-api");
+    result.innerText = "";
     return data;
   } catch (err) {
     console.log(err);
